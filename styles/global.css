@@ -1,0 +1,61 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* icons */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+
+:root {
+    --main-bg:  #F4F5F1;
+    --aside-bg: #004bff;
+    --shade-color: #b1c9ff;
+
+    --header-bg:var(--aside-bg);
+    --header-color:var(--main-bg);
+
+    --body-header-color: #1e323c;
+    --body-text-color: var(--main-bg);
+
+    --icon-aside-bg-color: var(--main-bg);
+    --icon-bg-color: var(--body-header-color);
+
+    --heading-font-weight-700: 700;
+    --heading-font-weight-400: 400;
+    --heading-font-weight-100: 100;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: var(--heading-font-weight-400);
+    font-style: normal;
+    background-color: var(--main-bg);
+    height: 100vh;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+   /*  grid-template-rows: minmax(auto, auto); */
+    grid-template-areas:
+        "as hd hd  hd hd  hd hd  hd hd"
+        "as main main main main main main main main"
+        "as main main main main main main main main"
+        "as main main main main main main main main"
+        "as main main main main main main main main"
+        "as main main main main main main main main"
+        "as main main main main main main main main"
+        "as main main main main main main main main"
+        "as main main main main main main main main"
+        ;
+}
+/* grid area */
+.aside {
+    grid-area: as;
+}
+.header {
+    grid-area: hd;
+}
+.main {
+    grid-area: main;
+}
